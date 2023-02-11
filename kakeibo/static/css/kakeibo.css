@@ -10,6 +10,12 @@
     text-decoration: none;
 }
 
+system_botton {
+    color: black;
+    font-size: 18px;
+    margin: auto;
+}
+
 .content {
     margin-left: 40px;
 }

@@ -9,7 +9,15 @@
     </head>
     <header>
         <div class="page-header">
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        <div id="system_botton">
+            {% if user.is_authenticated %}
+            <a href="/admin">管理画面</a>
+            {% endif %}
         </div>
     </header>
     <body>
@@ -21,8 +29,6 @@
                 </div>
             </div>
         </div>
-        <div>
-            <a href="admin">管理画面</a>
-        </div>
+
     </body>
 </html>
